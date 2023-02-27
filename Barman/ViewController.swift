@@ -9,19 +9,25 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let drinkDataManager = DrinkDataManager()
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        drinkDataManager.loadDrinks()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return drinkDataManager.count()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellDrinkID") else {
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = drinkDataManager.drink(at: indexPath.row).name
+        return cell
     }
 }
 
