@@ -107,13 +107,11 @@
 			children = (
 				8FE3906D29AC405C0097A2E5 /* AppDelegate.swift */,
 				8FE3906F29AC405C0097A2E5 /* SceneDelegate.swift */,
-				8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */,
-				8FE390A129AC4B750097A2E5 /* Drink.swift */,
-				8FE3907129AC405C0097A2E5 /* ViewController.swift */,
-				8FE3907329AC405C0097A2E5 /* Main.storyboard */,
+				8FE390A329AC768A0097A2E5 /* Models */,
+				8FE390A429AC769D0097A2E5 /* Controllers */,
+				8FE390A529AC79150097A2E5 /* Data */,
 				8FE3907629AC405E0097A2E5 /* Assets.xcassets */,
-				8FE3909D29AC41570097A2E5 /* drinks.json */,
-				8FE3907829AC405E0097A2E5 /* LaunchScreen.storyboard */,
+				8FE390A629AC793B0097A2E5 /* View */,
 				8FE3907B29AC405E0097A2E5 /* Info.plist */,
 			);
 			path = Barman;
@@ -134,6 +132,40 @@
 				8FE3909029AC405E0097A2E5 /* BarmanUITestsLaunchTests.swift */,
 			);
 			path = BarmanUITests;
+			sourceTree = "<group>";
+		};
+		8FE390A329AC768A0097A2E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */,
+				8FE390A129AC4B750097A2E5 /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8FE390A429AC769D0097A2E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3907129AC405C0097A2E5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8FE390A529AC79150097A2E5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3909D29AC41570097A2E5 /* drinks.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8FE390A629AC793B0097A2E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3907329AC405C0097A2E5 /* Main.storyboard */,
+				8FE3907829AC405E0097A2E5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
