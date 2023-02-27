@@ -19,6 +19,8 @@
 		8FE3909E29AC41570097A2E5 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3909D29AC41570097A2E5 /* drinks.json */; };
 		8FE390A029AC4A900097A2E5 /* DrinkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */; };
 		8FE390A229AC4B750097A2E5 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE390A129AC4B750097A2E5 /* Drink.swift */; };
+		8FE390A829AC7CCF0097A2E5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE390A729AC7CCF0097A2E5 /* DetailViewController.swift */; };
+		8FE390AA29AC7D680097A2E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE390A929AC7D680097A2E5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8FE3909D29AC41570097A2E5 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
 		8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDataManager.swift; sourceTree = "<group>"; };
 		8FE390A129AC4B750097A2E5 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		8FE390A729AC7CCF0097A2E5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8FE390A929AC7D680097A2E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				8FE3907629AC405E0097A2E5 /* Assets.xcassets */,
 				8FE390A629AC793B0097A2E5 /* View */,
 				8FE3907B29AC405E0097A2E5 /* Info.plist */,
+				8FE390A929AC7D680097A2E5 /* Constants.swift */,
 			);
 			path = Barman;
 			sourceTree = "<group>";
@@ -137,8 +142,8 @@
 		8FE390A329AC768A0097A2E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */,
 				8FE390A129AC4B750097A2E5 /* Drink.swift */,
+				8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE3907129AC405C0097A2E5 /* ViewController.swift */,
+				8FE390A729AC7CCF0097A2E5 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +309,8 @@
 				8FE390A029AC4A900097A2E5 /* DrinkDataManager.swift in Sources */,
 				8FE3907229AC405C0097A2E5 /* ViewController.swift in Sources */,
 				8FE3906E29AC405C0097A2E5 /* AppDelegate.swift in Sources */,
+				8FE390A829AC7CCF0097A2E5 /* DetailViewController.swift in Sources */,
+				8FE390AA29AC7D680097A2E5 /* Constants.swift in Sources */,
 				8FE390A229AC4B750097A2E5 /* Drink.swift in Sources */,
 				8FE3907029AC405C0097A2E5 /* SceneDelegate.swift in Sources */,
 			);

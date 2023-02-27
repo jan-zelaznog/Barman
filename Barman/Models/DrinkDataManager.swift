@@ -12,7 +12,7 @@ class DrinkDataManager {
     var drinks : [Drink] = []
 
     func loadDrinks() {
-        if let file = Bundle.main.url(forResource: "drinks", withExtension: "json") {
+        if let file = Bundle.main.url(forResource: File.main.name, withExtension: File.main.extension) {
             do {
                 let data = try Data(contentsOf: file)
                 drinks = try JSONDecoder().decode(Drinks.self, from: data)

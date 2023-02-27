@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Drinks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Barman" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="esv-c1-cbO" kind="show" trigger="accessoryAction" id="wqa-Vu-qdV"/>
+                                            <segue destination="esv-c1-cbO" kind="show" identifier="detailSegueID" trigger="accessoryAction" id="wqa-Vu-qdV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -56,7 +56,7 @@
                             <constraint firstItem="hQk-2S-eH6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jRr-tl-W1H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wZ4-Ts-uFK"/>
+                    <navigationItem key="navigationItem" title="Drinks" id="wZ4-Ts-uFK"/>
                     <connections>
                         <outlet property="tableView" destination="hQk-2S-eH6" id="2eF-n9-EZS"/>
                     </connections>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="yuX-9P-XxG">
             <objects>
-                <viewController id="esv-c1-cbO" sceneMemberID="viewController">
+                <viewController id="esv-c1-cbO" customClass="DetailViewController" customModule="Barman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IgF-R4-K6f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
