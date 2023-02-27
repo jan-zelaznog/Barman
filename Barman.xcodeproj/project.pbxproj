@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FE0FAFD29AD4EF8004D7262 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0FAFC29AD4EF8004D7262 /* NetworkMonitor.swift */; };
 		8FE3906E29AC405C0097A2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3906D29AC405C0097A2E5 /* AppDelegate.swift */; };
 		8FE3907029AC405C0097A2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3906F29AC405C0097A2E5 /* SceneDelegate.swift */; };
 		8FE3907229AC405C0097A2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3907129AC405C0097A2E5 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FE0FAFC29AD4EF8004D7262 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		8FE3906A29AC405C0097A2E5 /* Barman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE3906D29AC405C0097A2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE3906F29AC405C0097A2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				8FE390A129AC4B750097A2E5 /* Drink.swift */,
 				8FE3909F29AC4A900097A2E5 /* DrinkDataManager.swift */,
+				8FE0FAFC29AD4EF8004D7262 /* NetworkMonitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE390A029AC4A900097A2E5 /* DrinkDataManager.swift in Sources */,
+				8FE0FAFD29AD4EF8004D7262 /* NetworkMonitor.swift in Sources */,
 				8FE3907229AC405C0097A2E5 /* ViewController.swift in Sources */,
 				8FE3906E29AC405C0097A2E5 /* AppDelegate.swift in Sources */,
 				8FE390A829AC7CCF0097A2E5 /* DetailViewController.swift in Sources */,
