@@ -16,6 +16,7 @@
 		8FE3908529AC405E0097A2E5 /* BarmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3908429AC405E0097A2E5 /* BarmanTests.swift */; };
 		8FE3908F29AC405E0097A2E5 /* BarmanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3908E29AC405E0097A2E5 /* BarmanUITests.swift */; };
 		8FE3909129AC405E0097A2E5 /* BarmanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3909029AC405E0097A2E5 /* BarmanUITestsLaunchTests.swift */; };
+		8FE3909E29AC41570097A2E5 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3909D29AC41570097A2E5 /* drinks.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8FE3908A29AC405E0097A2E5 /* BarmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE3908E29AC405E0097A2E5 /* BarmanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarmanUITests.swift; sourceTree = "<group>"; };
 		8FE3909029AC405E0097A2E5 /* BarmanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarmanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FE3909D29AC41570097A2E5 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				8FE3907129AC405C0097A2E5 /* ViewController.swift */,
 				8FE3907329AC405C0097A2E5 /* Main.storyboard */,
 				8FE3907629AC405E0097A2E5 /* Assets.xcassets */,
+				8FE3909D29AC41570097A2E5 /* drinks.json */,
 				8FE3907829AC405E0097A2E5 /* LaunchScreen.storyboard */,
 				8FE3907B29AC405E0097A2E5 /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			files = (
 				8FE3907A29AC405E0097A2E5 /* LaunchScreen.storyboard in Resources */,
 				8FE3907729AC405E0097A2E5 /* Assets.xcassets in Resources */,
+				8FE3909E29AC41570097A2E5 /* drinks.json in Resources */,
 				8FE3907529AC405C0097A2E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
