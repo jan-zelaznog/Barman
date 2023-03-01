@@ -37,7 +37,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="esv-c1-cbO" kind="show" identifier="detailSegueID" trigger="accessoryAction" id="wqa-Vu-qdV"/>
+                                            <segue destination="esv-c1-cbO" kind="show" identifier="detailSegueID" id="VIc-Un-zHl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
