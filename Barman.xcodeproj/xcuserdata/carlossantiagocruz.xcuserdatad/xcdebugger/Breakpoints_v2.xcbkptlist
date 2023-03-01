@@ -3,4 +3,70 @@
    uuid = "D18A397B-218C-4B59-813D-06CA943CE54A"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AB5C119-C72B-4533-887A-594344965F56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Barman/Models/NetworkMonitor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "startDetection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC340861-CD9A-42C9-BF54-4883E955B53A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Barman/Controllers/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DC340861-CD9A-42C9-BF54-4883E955B53A - bccda6f926f44eac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Barman.DetailViewController.saveImageDocumentDirectory(string: Swift.String, image: __C.UIImage) -&gt; ()"
+                  moduleName = "Barman"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carlossantiagocruz/iOS-Projects/Barman/Barman/Controllers/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "DC340861-CD9A-42C9-BF54-4883E955B53A - bccda6f926f44eac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Barman.DetailViewController.saveImageDocumentDirectory(string: Swift.String, image: __C.UIImage) -&gt; ()"
+                  moduleName = "Barman"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carlossantiagocruz/iOS-Projects/Barman/Barman/Controllers/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "620">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

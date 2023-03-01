@@ -72,14 +72,55 @@
                     <view key="view" contentMode="scaleToFill" id="IgF-R4-K6f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-19-Wor">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="429"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
+                                        <rect key="frame" x="0.0" y="429" width="393" height="286"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-SI-os9">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="140.66666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-GR-QMS">
+                                                <rect key="frame" x="0.0" y="145.66666666666663" width="393" height="140.33333333333337"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eX7-Pz-yBX" firstAttribute="height" secondItem="NZ4-19-Wor" secondAttribute="height" multiplier="0.6" id="exa-1h-rgD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ztV-aK-WnR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ztV-aK-WnR" firstAttribute="trailing" secondItem="NZ4-19-Wor" secondAttribute="trailing" id="Wpr-Lt-1XN"/>
+                            <constraint firstItem="ztV-aK-WnR" firstAttribute="bottom" secondItem="NZ4-19-Wor" secondAttribute="bottom" id="f6j-bx-rMa"/>
+                            <constraint firstItem="NZ4-19-Wor" firstAttribute="leading" secondItem="ztV-aK-WnR" secondAttribute="leading" id="sYO-G0-Dis"/>
+                            <constraint firstItem="NZ4-19-Wor" firstAttribute="top" secondItem="ztV-aK-WnR" secondAttribute="top" id="uG6-qi-qFr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qdg-2g-gGj"/>
+                    <connections>
+                        <outlet property="directionsLabel" destination="UBb-GR-QMS" id="IXp-5q-26E"/>
+                        <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
+                        <outlet property="ingredientsLabel" destination="mnr-SI-os9" id="tNw-bD-nrh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKI-B6-OMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="4"/>
+            <point key="canvasLocation" x="1812.9770992366412" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ciy-AC-WjT">

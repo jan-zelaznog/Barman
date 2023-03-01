@@ -18,3 +18,7 @@ struct CellID {
 struct SegueID {
     static let detail = "detailSegueID"
 }
+
+struct Sites {
+    static let baseURL = "http://janzelaznog.com/DDAM/iOS/drinksimages/"
+}

@@ -7,6 +7,7 @@
 
 import Foundation
 import Network
+import UIKit
 
 class NetworkMonitor: NSObject {
     
