@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Add New Drink-->
         <scene sceneID="yuX-9P-XxG">
             <objects>
                 <viewController id="esv-c1-cbO" customClass="DetailViewController" customModule="Barman" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-19-Wor">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_drink" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="429"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
@@ -120,7 +120,9 @@
                             <constraint firstItem="NZ4-19-Wor" firstAttribute="top" secondItem="ztV-aK-WnR" secondAttribute="top" id="uG6-qi-qFr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qdg-2g-gGj"/>
+                    <navigationItem key="navigationItem" title="Add New Drink" id="qdg-2g-gGj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="RvN-Qr-GPI"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="directionsTextField" destination="ZEe-yY-3d4" id="gaU-W3-HVh"/>
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
@@ -174,6 +176,7 @@
         <segue reference="cIp-xi-ocL"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="empty_drink" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
