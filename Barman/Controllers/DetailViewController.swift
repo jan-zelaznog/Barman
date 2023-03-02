@@ -24,8 +24,11 @@ class DetailViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = shareBarButtonItem
             self.title = drink.name
             self.nameTextField.text = drink.name
+            self.nameTextField.isEnabled = false
             self.ingredientsTextField.text = drink.ingredients
+            self.ingredientsTextField.isEnabled = false
             self.directionsTextField.text = drink.directions
+            self.directionsTextField.isEnabled = false
         }
     }
     
