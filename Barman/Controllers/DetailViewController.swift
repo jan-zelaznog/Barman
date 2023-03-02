@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
         }
         else {
             if NetworkReachability.shared.isConnected {
+                self.imageView.image = UIImage(named: "empty_drink.png")
                 guard var url = URL(string: Sites.baseURL), let stringImg = drink?.img else { return }
                 url.appendPathComponent(stringImg)
                 let configuration = URLSessionConfiguration.ephemeral
