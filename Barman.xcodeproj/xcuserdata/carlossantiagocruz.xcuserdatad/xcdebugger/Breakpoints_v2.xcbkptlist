@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F91ACD2E-898A-4B64-B746-4797491AD209"
+            uuid = "5A67F36D-1D70-4EE5-92C0-3FF7A3EBAC6E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Barman/Controllers/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "updateSaveBarButtonItemState()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

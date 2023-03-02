@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var directionsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
+    var saveBarButtonItem = UIBarButtonItem()
     
     var drink: Drink?
 
@@ -34,6 +35,12 @@ class DetailViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = nil
         } else {
             self.addPhotoButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+            let cancelBarButtonItem: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.cancel, target: self, action: #selector(dismissViewController))
+            self.navigationItem.leftBarButtonItem = cancelBarButtonItem
+            saveBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.save, target: self, action: #selector(save))
+            self.navigationItem.rightBarButtonItem = saveBarButtonItem
+            initializeTextFields()
+            updateSaveBarButtonItemState()
         }
     }
     
@@ -106,5 +113,26 @@ class DetailViewController: UIViewController {
     
     @objc func share() {
         
+    }
+    
+    @objc func save() {
+        
+    }
+    
+    @objc func dismissViewController() {
+        dismiss(animated: true)
+    }
+    
+    func updateSaveBarButtonItemState() {
+        let name = nameTextField.text ?? ""
+        let ingredients = ingredientsTextField.text ?? ""
+        let directions = directionsTextField.text ?? ""
+        saveBarButtonItem.isEnabled = !name.isEmpty && !ingredients.isEmpty && !directions.isEmpty
+    }
+    
+    func initializeTextFields() {
+        nameTextField.text = ""
+        ingredientsTextField.text = ""
+        directionsTextField.text = ""
     }
 }
