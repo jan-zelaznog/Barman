@@ -11,7 +11,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ingredientsTextField: UITextField!
-    @IBOutlet weak var directionsLabel: UILabel!
+    @IBOutlet weak var directionsTextField: UITextField!
     
     var drink: Drink?
 
@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
         if let drink = drink {
             self.title = drink.name
             self.ingredientsTextField.text = drink.ingredients
-            self.directionsLabel.text = drink.directions
+            self.directionsTextField.text = drink.directions
         }
     }
     
