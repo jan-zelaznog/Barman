@@ -20,6 +20,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         if let drink = drink {
+            let shareBarButtonItem: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.action, target: self, action: #selector(share))
+            self.navigationItem.rightBarButtonItem = shareBarButtonItem
             self.title = drink.name
             self.nameTextField.text = drink.name
             self.ingredientsTextField.text = drink.ingredients
@@ -92,5 +94,9 @@ class DetailViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func share() {
+        
     }
 }
