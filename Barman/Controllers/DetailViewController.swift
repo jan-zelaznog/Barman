@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var directionsTextField: UITextField!
+    @IBOutlet weak var addPhotoButton: UIButton!
     
     var drink: Drink?
 
@@ -29,6 +30,10 @@ class DetailViewController: UIViewController {
             self.ingredientsTextField.isEnabled = false
             self.directionsTextField.text = drink.directions
             self.directionsTextField.isEnabled = false
+            self.addPhotoButton.isHidden = true
+            self.navigationItem.leftBarButtonItem = nil
+        } else {
+            self.addPhotoButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
         }
     }
     

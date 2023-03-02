@@ -82,24 +82,40 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-19-Wor">
                                 <rect key="frame" x="0.0" y="56" width="393" height="727"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_drink" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="436.33333333333331"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zsa-Lh-bDv">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="509"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_drink" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="458"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-MP-sGB">
+                                                <rect key="frame" x="0.0" y="458" width="393" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eX7-Pz-yBX" firstAttribute="height" secondItem="Zsa-Lh-bDv" secondAttribute="height" multiplier="0.9" id="zvT-Du-e3p"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
-                                        <rect key="frame" x="0.0" y="436.33333333333326" width="393" height="290.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="509" width="393" height="218"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-bX-j1E">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="93.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="69.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
-                                                <rect key="frame" x="0.0" y="98.333333333333314" width="393" height="93.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="74.333333333333371" width="393" height="69.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Directions" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-yY-3d4">
-                                                <rect key="frame" x="0.0" y="197.00000000000006" width="393" height="93.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="148.66666666666663" width="393" height="69.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -107,7 +123,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eX7-Pz-yBX" firstAttribute="height" secondItem="NZ4-19-Wor" secondAttribute="height" multiplier="0.6" id="exa-1h-rgD"/>
+                                    <constraint firstItem="Zsa-Lh-bDv" firstAttribute="height" secondItem="NZ4-19-Wor" secondAttribute="height" multiplier="0.7" id="MjW-ah-m3y"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -121,9 +137,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Drink" id="qdg-2g-gGj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="RvN-Qr-GPI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i1Q-T8-qvr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RvN-Qr-GPI"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoButton" destination="7Mi-MP-sGB" id="nuK-88-hnu"/>
                         <outlet property="directionsTextField" destination="ZEe-yY-3d4" id="gaU-W3-HVh"/>
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
                         <outlet property="ingredientsTextField" destination="ke8-e7-n6K" id="YbP-jg-MDJ"/>
