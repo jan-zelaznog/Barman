@@ -57,7 +57,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Drinks" id="wZ4-Ts-uFK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kfb-5Q-Sq5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kfb-5Q-Sq5">
                             <connections>
                                 <segue destination="95g-bZ-kBT" kind="presentation" id="h4U-Jw-qKw"/>
                             </connections>
@@ -88,13 +88,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
                                         <rect key="frame" x="0.0" y="429" width="393" height="286"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-bX-j1E">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="92"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="140.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="97" width="393" height="92"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Directions" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-yY-3d4">
-                                                <rect key="frame" x="0.0" y="145.66666666666663" width="393" height="140.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="194" width="393" height="92"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -120,6 +125,7 @@
                         <outlet property="directionsTextField" destination="ZEe-yY-3d4" id="gaU-W3-HVh"/>
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
                         <outlet property="ingredientsTextField" destination="ke8-e7-n6K" id="YbP-jg-MDJ"/>
+                        <outlet property="nameTextField" destination="fe7-bX-j1E" id="tye-vm-vKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKI-B6-OMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

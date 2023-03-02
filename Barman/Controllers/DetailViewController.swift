@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var directionsTextField: UITextField!
     
@@ -20,6 +21,7 @@ class DetailViewController: UIViewController {
         
         if let drink = drink {
             self.title = drink.name
+            self.nameTextField.text = drink.name
             self.ingredientsTextField.text = drink.ingredients
             self.directionsTextField.text = drink.directions
         }
