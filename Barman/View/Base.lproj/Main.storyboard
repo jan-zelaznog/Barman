@@ -37,7 +37,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="esv-c1-cbO" kind="show" identifier="detailSegueID" id="VIc-Un-zHl"/>
+                                            <segue destination="esv-c1-cbO" kind="show" identifier="detailSegueID" id="cIp-xi-ocL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -56,7 +56,13 @@
                             <constraint firstItem="hQk-2S-eH6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jRr-tl-W1H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Drinks" id="wZ4-Ts-uFK"/>
+                    <navigationItem key="navigationItem" title="Drinks" id="wZ4-Ts-uFK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kfb-5Q-Sq5">
+                            <connections>
+                                <segue destination="95g-bZ-kBT" kind="presentation" id="h4U-Jw-qKw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hQk-2S-eH6" id="2eF-n9-EZS"/>
                     </connections>
@@ -82,12 +88,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
                                         <rect key="frame" x="0.0" y="429" width="393" height="286"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-SI-os9">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="140.66666666666666"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-GR-QMS">
                                                 <rect key="frame" x="0.0" y="145.66666666666663" width="393" height="140.33333333333337"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -115,12 +120,12 @@
                     <connections>
                         <outlet property="directionsLabel" destination="UBb-GR-QMS" id="IXp-5q-26E"/>
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
-                        <outlet property="ingredientsLabel" destination="mnr-SI-os9" id="tNw-bD-nrh"/>
+                        <outlet property="ingredientsTextField" destination="ke8-e7-n6K" id="YbP-jg-MDJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKI-B6-OMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812.9770992366412" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="3750.3816793893129" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ciy-AC-WjT">
@@ -140,7 +145,29 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MRk-jr-tdN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="95g-bZ-kBT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YKQ-vq-jAH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xuE-IY-1uk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="esv-c1-cbO" kind="relationship" relationship="rootViewController" id="U2S-0c-V5K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPq-kN-ZiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="-382"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cIp-xi-ocL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
