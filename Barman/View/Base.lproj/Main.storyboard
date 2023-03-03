@@ -146,6 +146,7 @@
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
                         <outlet property="ingredientsTextField" destination="ke8-e7-n6K" id="YbP-jg-MDJ"/>
                         <outlet property="nameTextField" destination="fe7-bX-j1E" id="tye-vm-vKK"/>
+                        <outlet property="stackViewContainerBottomConstraint" destination="f6j-bx-rMa" id="wx5-e0-Zwa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKI-B6-OMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

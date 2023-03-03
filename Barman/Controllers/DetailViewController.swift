@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var directionsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
     var saveBarButtonItem = UIBarButtonItem()
+    @IBOutlet weak var stackViewContainerBottomConstraint: NSLayoutConstraint!
     
     var drink: Drink?
 
@@ -41,6 +42,7 @@ class DetailViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = saveBarButtonItem
             initializeTextFields()
             updateSaveBarButtonItemState()
+            registerForKeyNotification()
         }
     }
     
@@ -134,5 +136,47 @@ class DetailViewController: UIViewController {
         nameTextField.text = ""
         ingredientsTextField.text = ""
         directionsTextField.text = ""
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if nameTextField.isEditing || ingredientsTextField.isEditing || directionsTextField.isEditing {
+            moveViewWithKeyboard(notification: notification, viewBottomConstraint: self.stackViewContainerBottomConstraint, keyboardWillShow: true)
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        moveViewWithKeyboard(notification: notification, viewBottomConstraint: self.stackViewContainerBottomConstraint, keyboardWillShow: false)
+    }
+    
+    func moveViewWithKeyboard(notification: NSNotification, viewBottomConstraint: NSLayoutConstraint, keyboardWillShow: Bool) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        let keyboardHeight = keyboardSize.height
+        let keyboardDuration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let keyboardCurve = UIView.AnimationCurve(rawValue: notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! Int)!
+        if keyboardWillShow {
+            let safeAreaExists = (self.view?.window?.safeAreaInsets.bottom != 0) // Check if safe area exists
+            let bottomConstant: CGFloat = 20
+            viewBottomConstraint.constant = keyboardHeight + (safeAreaExists ? 0 : bottomConstant)
+        } else {
+            viewBottomConstraint.constant = 20
+        }
+        let animator = UIViewPropertyAnimator(duration: keyboardDuration, curve: keyboardCurve) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
+        animator.startAnimation()
+    }
+    
+    func registerForKeyNotification() {
+        NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(self.keyboardWillShow),
+                    name: UIResponder.keyboardWillShowNotification,
+                    object: nil)
+
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(self.keyboardWillHide),
+                    name: UIResponder.keyboardWillHideNotification,
+                    object: nil)
     }
 }
