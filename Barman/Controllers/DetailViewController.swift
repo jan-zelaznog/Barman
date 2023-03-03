@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -43,6 +43,9 @@ class DetailViewController: UIViewController {
             initializeTextFields()
             updateSaveBarButtonItemState()
             registerForKeyNotification()
+            self.nameTextField.delegate = self
+            self.ingredientsTextField.delegate = self
+            self.directionsTextField.delegate = self
         }
     }
     
@@ -178,5 +181,14 @@ class DetailViewController: UIViewController {
                     selector: #selector(self.keyboardWillHide),
                     name: UIResponder.keyboardWillHideNotification,
                     object: nil)
+    }
+    
+    @IBAction func returnPressed(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
