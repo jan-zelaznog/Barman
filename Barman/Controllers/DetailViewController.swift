@@ -191,4 +191,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveBarButtonItemState()
+    }
 }

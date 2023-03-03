@@ -108,16 +108,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textEditingChanged:" destination="esv-c1-cbO" eventType="editingDidEnd" id="z6k-CC-bgn"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" placeholder="Add Ingredients" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
                                                 <rect key="frame" x="0.0" y="73" width="393" height="68.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textEditingChanged:" destination="esv-c1-cbO" eventType="editingDidEnd" id="Zig-Kl-RsA"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Directions" borderStyle="roundedRect" placeholder="Add Directions" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-yY-3d4">
                                                 <rect key="frame" x="0.0" y="146.33333333333337" width="393" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textEditingChanged:" destination="esv-c1-cbO" eventType="editingDidEnd" id="veB-OB-elG"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
