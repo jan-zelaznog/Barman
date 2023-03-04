@@ -8,25 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let drinkDataManager = DrinkDataManager()
+
+    var drinks = [Drink]()
     
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        drinkDataManager.loadDrinks()
+        if let drinks = DrinkDataManager.loadDrinks() {
+            self.drinks = drinks
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinkDataManager.count()
+        return drinks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellID.drinkID) else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = drinkDataManager.drink(at: indexPath.row).name
+        cell.textLabel?.text = drinks[indexPath.row].name
         return cell
     }
     
@@ -34,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == SegueID.detail {
             let detailViewControler = segue.destination as! DetailViewController
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let drink = drinkDataManager.drinks[indexPath.row]
+            let drink = drinks[indexPath.row]
             detailViewControler.drink = drink
         }
     }

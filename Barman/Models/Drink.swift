@@ -13,5 +13,3 @@ struct Drink: Decodable {
     let ingredients: String
     let directions: String
 }
-
-typealias Drinks = [Drink]
