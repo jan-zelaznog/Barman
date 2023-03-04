@@ -7,27 +7,15 @@
 
 import Foundation
 
-class DrinkDataManager {
-    
-    var drinks : [Drink] = []
+struct DrinkDataManager {
 
-    func loadDrinks() {
+    static func loadDrinks() -> [Drink]? {
         if let file = Bundle.main.url(forResource: File.main.name, withExtension: File.main.extension) {
-            do {
-                let data = try Data(contentsOf: file)
-                drinks = try JSONDecoder().decode(Drinks.self, from: data)
-            } catch {
-                print("Error", error)
-            }
+            guard let data = try? Data(contentsOf: file) else { return nil }
+            return try? JSONDecoder().decode([Drink].self, from: data)
+        } else {
+            return nil
         }
-    }
-    
-    func count() -> Int {
-        drinks.count
-    }
-    
-    func drink(at index: Int) -> Drink {
-        return drinks[index]
     }
 }
 
