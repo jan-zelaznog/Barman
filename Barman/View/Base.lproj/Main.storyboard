@@ -146,19 +146,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Drink" id="qdg-2g-gGj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i1Q-T8-qvr"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RvN-Qr-GPI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i1Q-T8-qvr">
+                            <connections>
+                                <segue destination="6Rc-Wy-k6W" kind="unwind" identifier="" unwindAction="unwindToDrinkListWithSegue:" id="fkH-Or-58F"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RvN-Qr-GPI">
+                            <connections>
+                                <segue destination="6Rc-Wy-k6W" kind="unwind" identifier="saveUnwind" unwindAction="unwindToDrinkListWithSegue:" id="0du-a0-AIz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addPhotoButton" destination="7Mi-MP-sGB" id="nuK-88-hnu"/>
+                        <outlet property="cancelBarButtonItem" destination="i1Q-T8-qvr" id="UyM-0E-RPN"/>
                         <outlet property="directionsTextField" destination="ZEe-yY-3d4" id="gaU-W3-HVh"/>
                         <outlet property="imageView" destination="eX7-Pz-yBX" id="Gvs-wo-bKs"/>
                         <outlet property="ingredientsTextField" destination="ke8-e7-n6K" id="YbP-jg-MDJ"/>
                         <outlet property="nameTextField" destination="fe7-bX-j1E" id="tye-vm-vKK"/>
+                        <outlet property="saveBarButtonItem" destination="RvN-Qr-GPI" id="tne-IB-PhE"/>
                         <outlet property="stackViewContainerBottomConstraint" destination="f6j-bx-rMa" id="wx5-e0-Zwa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKI-B6-OMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Rc-Wy-k6W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3750.3816793893129" y="3.5211267605633805"/>
         </scene>

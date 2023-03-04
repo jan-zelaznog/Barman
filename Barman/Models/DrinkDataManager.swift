@@ -17,5 +17,12 @@ struct DrinkDataManager {
             return nil
         }
     }
+    
+    static func update(drinks: [Drink]) {
+        guard let directoryPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        let filePath = directoryPath.appendingPathComponent("drinks.json")
+        let json = try? JSONEncoder().encode(drinks)
+        try? json?.write(to: filePath)
+    }
 }
 

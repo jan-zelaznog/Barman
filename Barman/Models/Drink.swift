@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Drink: Decodable {
+struct Drink: Decodable, Encodable {
     let name: String
     let img: String
     let ingredients: String

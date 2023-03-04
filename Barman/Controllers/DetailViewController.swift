@@ -14,7 +14,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var directionsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
-    var saveBarButtonItem = UIBarButtonItem()
+    @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var stackViewContainerBottomConstraint: NSLayoutConstraint!
     
     var drink: Drink?
@@ -36,10 +37,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             self.navigationItem.leftBarButtonItem = nil
         } else {
             self.addPhotoButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
-            let cancelBarButtonItem: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.cancel, target: self, action: #selector(dismissViewController))
-            self.navigationItem.leftBarButtonItem = cancelBarButtonItem
-            saveBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.save, target: self, action: #selector(save))
-            self.navigationItem.rightBarButtonItem = saveBarButtonItem
             initializeTextFields()
             updateSaveBarButtonItemState()
             registerForKeyNotification()
@@ -124,10 +121,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func dismissViewController() {
-        dismiss(animated: true)
-    }
-    
     func updateSaveBarButtonItemState() {
         let name = nameTextField.text ?? ""
         let ingredients = ingredientsTextField.text ?? ""
@@ -194,5 +187,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func textEditingChanged(_ sender: UITextField) {
         updateSaveBarButtonItemState()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "saveUnwind" else { return }
+        let name = nameTextField.text!
+        let ingredients = ingredientsTextField.text!
+        let directions = directionsTextField.text!
+        
+        drink = Drink(name: name, img: "", ingredients: ingredients, directions: directions)
     }
 }

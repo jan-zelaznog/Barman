@@ -47,5 +47,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.deselectRow(at: index, animated: true)
         }
     }
+    
+    @IBAction func unwindToDrinkList(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else { return }
+        let sourceViewController = segue.source as! DetailViewController
+        
+        if let drink = sourceViewController.drink {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                drinks[selectedIndexPath.row] = drink
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else { // if you cannot create the constant then else
+                let newIndexPath = IndexPath(row: drinks.count, section: 0)
+                drinks.append(drink)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+        DrinkDataManager.update(drinks: drinks)
+    }
 }
 
