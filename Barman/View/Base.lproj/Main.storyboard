@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0k-GJ-tsj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0k-GJ-tsj">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,20 +77,20 @@
             <objects>
                 <viewController id="esv-c1-cbO" customClass="DetailViewController" customModule="Barman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IgF-R4-K6f">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-19-Wor">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zsa-Lh-bDv">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="500.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="550.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_drink" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="450.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="495.33333333333331"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-MP-sGB">
-                                                <rect key="frame" x="0.0" y="450.33333333333337" width="393" height="50.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="495.33333333333337" width="393" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -102,10 +103,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
-                                        <rect key="frame" x="0.0" y="500.66666666666657" width="393" height="214.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="550.33333333333337" width="393" height="235.66666666666663"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" placeholder="Add name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-bX-j1E">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="68"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -113,7 +114,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" placeholder="Add Ingredients" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
-                                                <rect key="frame" x="0.0" y="73" width="393" height="68.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="80" width="393" height="75.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -121,7 +122,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Directions" borderStyle="roundedRect" placeholder="Add Directions" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-yY-3d4">
-                                                <rect key="frame" x="0.0" y="146.33333333333337" width="393" height="68"/>
+                                                <rect key="frame" x="0.0" y="160.33333333333326" width="393" height="75.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -212,7 +213,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cIp-xi-ocL"/>
+        <segue reference="U2S-0c-V5K"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="empty_drink" width="1024" height="1024"/>

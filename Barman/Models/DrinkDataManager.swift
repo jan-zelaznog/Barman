@@ -2,7 +2,7 @@
 //  DringDataManager.swift
 //  Barman
 //
-//  Created by C4rl0s on 26/02/23.
+//  Created by JanZelaznog on 26/02/23.
 //
 
 import Foundation

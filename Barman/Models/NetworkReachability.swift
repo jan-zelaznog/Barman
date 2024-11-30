@@ -2,7 +2,7 @@
 //  NetworkReachability.swift
 //  Barman
 //
-//  Created by C4rl0s on 27/02/23.
+//  Created by JanZelaznog on 27/02/23.
 //
 
 import Network
