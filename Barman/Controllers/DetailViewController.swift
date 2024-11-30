@@ -6,8 +6,11 @@
 //
 
 import UIKit
+// para validar el permiso de uso de la camara necesitamos las clases de este framework
+import AVFoundation
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -19,7 +22,56 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stackViewContainerBottomConstraint: NSLayoutConstraint!
     
     var drink: Drink?
-
+// uiimagepickercontroller siempre debe ser una property para que se mantenga la referencia
+    var ipc: UIImagePickerController!
+    
+    @IBAction func btnCamaraTouch(_ sender: Any) {
+        // validar permisos para usar la camara
+        switch AVCaptureDevice.authorizationStatus(for:.video) {
+        case .authorized: // el usuario ya dió los permisos para usarla
+            self.mostrarPicker(tipo:UIImagePickerController.SourceType.camera)
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for:.video) { nuevovalor in
+                if nuevovalor {
+                    self.mostrarPicker(tipo:UIImagePickerController.SourceType.camera)
+                }
+            }
+        default:
+            let ac = UIAlertController(title: "Error", message:"Se requiere la cámara. Desea configurar los permisos en settings?", preferredStyle: .alert)
+            let action = UIAlertAction(title: "ok", style: .default) {
+                alertaction in
+                let configURL = URL(string: UIApplication.openSettingsURLString)
+                UIApplication.shared.open(configURL!)
+            }
+            let action2 = UIAlertAction(title: "ahora no", style: .default)
+            ac.addAction(action)
+            ac.addAction(action2)
+            self.present(ac, animated: true)
+        }
+    }
+    
+    func mostrarPicker( tipo: UIImagePickerController.SourceType) {
+        ipc = UIImagePickerController()
+        ipc.delegate = self
+        ipc.sourceType = tipo
+        ipc.allowsEditing = true
+        self.present(ipc, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // si NO se permite la edición de la foto, hay que buscar la foto elegida, en esta llave:
+        //if let imagen = info[.originalImage] as? UIImage {
+        
+        // si se permite la edición de la foto, hay que buscar la foto elegida, en esta llave:
+        if let imagen = info[.editedImage] as? UIImage {
+            imageView.image = imagen
+            print("la imagen ya debe estar actualizada")
+            saveImageDocumentDirectory(string: "nueva_foto.png", image: imageView.image!)
+        }
+        picker.dismiss(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
