@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D912B542D04AB9200AE5315 /* CryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D912B532D04AB9200AE5315 /* CryptoKit.framework */; };
 		3D983AFD2D03D67600D4D6DB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D983AFC2D03D67600D4D6DB /* MessageUI.framework */; };
 		3D983AFF2D03E55C00D4D6DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D983AFE2D03E55C00D4D6DB /* LoginViewController.swift */; };
 		3D983B012D03EC0400D4D6DB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D983B002D03EC0400D4D6DB /* Services.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D912B532D04AB9200AE5315 /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = System/Library/Frameworks/CryptoKit.framework; sourceTree = SDKROOT; };
 		3D983AFC2D03D67600D4D6DB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3D983AFE2D03E55C00D4D6DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D983B002D03EC0400D4D6DB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D912B542D04AB9200AE5315 /* CryptoKit.framework in Frameworks */,
 				3D983AFD2D03D67600D4D6DB /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +103,7 @@
 		3D983AFB2D03D67600D4D6DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D912B532D04AB9200AE5315 /* CryptoKit.framework */,
 				3D983AFC2D03D67600D4D6DB /* MessageUI.framework */,
 			);
 			name = Frameworks;

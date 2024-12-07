@@ -71,9 +71,24 @@ class CustomLoginViewController: UIViewController, UITextFieldDelegate {
         else if pass.isEmpty {
             message = "Por favor ingrese su password"
         }
-        
         if message.isEmpty {
-            Services().loginService(account, pass)
+            Services().loginService(account, pass) { dict in
+                DispatchQueue.main.async {  // hay que volver al thread principal para hacer cambios en la UI
+                    // TODO: agregar un activity indicator, y desactivarlo aqui
+                    guard let codigo = dict?["code"] as? Int,
+                          let mensaje = dict?["message"] as? String
+                    else {
+                        Utils.showMessage("Ocurrió un error. Reintente más tarde o contacte a servicio al cliente")
+                        return
+                    }
+                    if codigo == 200 {
+                        self.performSegue(withIdentifier: "loginOK", sender:nil)
+                    }
+                    else {
+                        Utils.showMessage(mensaje)
+                    }
+                }
+            }
             if parent != nil {
                 //let localParent = parent as! LoginInterface
                 //localParent.customLogin(mail:account, password:pass)
