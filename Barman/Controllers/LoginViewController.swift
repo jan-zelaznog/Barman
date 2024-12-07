@@ -82,6 +82,7 @@ class CustomLoginViewController: UIViewController, UITextFieldDelegate {
                         return
                     }
                     if codigo == 200 {
+                        // TODO: Implementar con UserDefaults la comprobación de sesión iniciada
                         self.performSegue(withIdentifier: "loginOK", sender:nil)
                     }
                     else {

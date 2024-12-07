@@ -11,12 +11,32 @@ import AuthenticationServices
 import GoogleSignIn
 
 class LoginInterface: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
-    
+    // TODO: Detectar la conexión a Internet
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
     
     let actInd = UIActivityIndicatorView(style: .large)
+    // TODO: implementar cuando debe aparecer y desaparecer el activity indicator
+    
+    func detectaEstado () { // revisa si el usuario ya inició sesión
+        // TODO: si es customLogin, hay que revisar en UserDefaults
+        
+        // si esta loggeado con AppleId
+        
+        
+        // si esta loggeado con Google
+        GIDSignIn.sharedInstance.restorePreviousSignIn { usuario, error in
+            guard let perfil = usuario else { return }
+            print ("usuario: \(perfil.profile?.name ?? ""), correo: \(perfil.profile?.email ?? "")")
+            self.performSegue(withIdentifier:"loginOK", sender:nil)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        detectaEstado()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

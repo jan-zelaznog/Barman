@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,8 +20,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.drinks = drinks
         }
         NotificationCenter.default.addObserver(self, selector:#selector(nuevoDrink), name:NSNotification.Name("NUEVO_DRINK"), object: nil)
+        let logoutBtn = UIBarButtonItem(image:UIImage(systemName:"rectangle.portrait.and.arrow.right"), style:.plain, target:self, action:#selector(logout))
+        self.navigationItem.leftBarButtonItem = logoutBtn
     }
 
+    @objc func logout () {
+        // TODO: confirmar si el usuario realmente quiere cerrar sesión
+        // TODO: si es customLogin, hay que revisar en UserDefaults y eliminar la llave
+        
+        // si esta loggeado con AppleId
+        
+        
+        // si esta loggeado con Google
+        GIDSignIn.sharedInstance.signOut()
+        self.dismiss(animated: true)
+    }
+    
     @objc func nuevoDrink() {
         let ad = UIApplication.shared.delegate as! AppDelegate
         if let unDrink = ad.drinkExterno {

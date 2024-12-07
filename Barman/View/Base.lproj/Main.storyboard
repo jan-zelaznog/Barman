@@ -77,20 +77,20 @@
             <objects>
                 <viewController id="esv-c1-cbO" customClass="DetailViewController" customModule="Barman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IgF-R4-K6f">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-19-Wor">
-                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zsa-Lh-bDv">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="550.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="565.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_drink" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Pz-yBX">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="495.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="509"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-MP-sGB">
-                                                <rect key="frame" x="0.0" y="495.33333333333337" width="393" height="55"/>
+                                                <rect key="frame" x="0.0" y="509.00000000000006" width="393" height="56.666666666666686"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -106,10 +106,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-ah-BIh">
-                                        <rect key="frame" x="0.0" y="550.33333333333337" width="393" height="235.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="565.66666666666663" width="393" height="242.33333333333337"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" placeholder="Add name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-bX-j1E">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="77.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -117,7 +117,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingredients" borderStyle="roundedRect" placeholder="Add Ingredients" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-e7-n6K">
-                                                <rect key="frame" x="0.0" y="80" width="393" height="75.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="82.333333333333371" width="393" height="77.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -125,7 +125,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Directions" borderStyle="roundedRect" placeholder="Add Directions" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-yY-3d4">
-                                                <rect key="frame" x="0.0" y="160.33333333333326" width="393" height="75.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="165" width="393" height="77.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -234,7 +234,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U2S-0c-V5K"/>
+        <segue reference="cIp-xi-ocL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="empty_drink" width="1024" height="1024"/>
