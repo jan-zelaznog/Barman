@@ -16,7 +16,7 @@ class CustomLoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .cyan
         label.text = "Ingresa los siguientes datos:"
         label.font = UIFont(name: "SegoeUI-Semibold", size: 16)
         label.textAlignment = .center
@@ -54,7 +54,7 @@ class CustomLoginViewController: UIViewController, UITextFieldDelegate {
         label.frame = CGRect(x:10, y:60, width:rect.width - 20, height:35)
         accountField.frame = CGRect(x:20, y:label.frame.maxY + 20, width:rect.width - 40, height:35)
         passwordField.frame = CGRect(x:20, y:accountField.frame.maxY + 25, width:rect.width - 40, height:35)
-        loginButton.frame = CGRect(x: 40,y:passwordField.frame.maxY+150,width:rect.width - 80,height: 45)
+        loginButton.frame = CGRect(x: 40,y:passwordField.frame.maxY+120,width:rect.width - 80,height: 45)
     }
     
     @objc func loginAction() {

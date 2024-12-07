@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import AuthenticationServices
+import GoogleSignIn
 
 class LoginInterface: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
     
@@ -32,6 +33,23 @@ class LoginInterface: UIViewController, ASAuthorizationControllerPresentationCon
         appleIDBtn.center = self.view.center
         appleIDBtn.frame.origin.y = loginVC.view.frame.maxY + 10
         appleIDBtn.addTarget(self, action:#selector(appleBtnTouch), for:.touchUpInside)
+        let googleBtn = GIDSignInButton(frame:CGRect(x:0, y:appleIDBtn.frame.maxY + 10, width: appleIDBtn.frame.width, height:appleIDBtn.frame.height) )
+        googleBtn.center.x = self.view.center.x
+        self.view.addSubview(googleBtn)
+        googleBtn.addTarget(self, action:#selector(googleBtnTouch), for:.touchUpInside)
+    }
+    
+    @objc func googleBtnTouch () {
+        GIDSignIn.sharedInstance.signIn(withPresenting:self){ resultado, error in
+            if error != nil {
+                Utils.showMessage("jiuston... \(error?.localizedDescription)")
+            }
+            else {
+                guard let perfil = resultado?.user else { return }
+                print ("usuario: \(perfil.profile?.name), correo: \(perfil.profile?.email)")
+                self.performSegue(withIdentifier: "loginOK", sender: nil)
+            }
+        }
     }
     
     @objc func appleBtnTouch () {
