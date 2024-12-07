@@ -8,9 +8,11 @@
 import UIKit
 // para validar el permiso de uso de la camara necesitamos las clases de este framework
 import AVFoundation
+// para utilizar el app de correo
+import MessageUI
 
 
-class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -166,7 +168,30 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @objc func share() {
-        
+        let elementos = ["Inventé un nuevo trago!", imageView.image as Any] as [Any]
+        let avc = UIActivityViewController(activityItems:elementos, applicationActivities:nil)
+        avc.excludedActivityTypes = [.postToFacebook, .postToWeibo]
+        self.present(avc, animated: true)
+        /*
+        // compartir por correo electrónico con el app de Mail
+        if MFMailComposeViewController.canSendMail() {
+            let mcvc = MFMailComposeViewController()
+            mcvc.delegate = self
+            mcvc.mailComposeDelegate = self
+            mcvc.setSubject("Inventé un nuevo trago!")
+            mcvc.setToRecipients(["jan.zelaznog@gmail.com"])
+            mcvc.setMessageBody("<b>\(drink?.name ?? "")</b><br>\(drink?.directions ?? "")", isHTML:true)
+            mcvc.addAttachmentData(imageView.image!.jpegData(compressionQuality: 0.5)!, mimeType:"", fileName:"miBebida.jpg")
+            self.present(mcvc, animated: true)
+        }
+        */
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if result == .sent {
+            // hacer algo?
+        }
+        controller.dismiss(animated: true)
     }
     
     @objc func save() {
