@@ -18,8 +18,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let drinks = DrinkDataManager.loadDrinks() {
             self.drinks = drinks
         }
+        NotificationCenter.default.addObserver(self, selector:#selector(nuevoDrink), name:NSNotification.Name("NUEVO_DRINK"), object: nil)
     }
 
+    @objc func nuevoDrink() {
+        let ad = UIApplication.shared.delegate as! AppDelegate
+        if let unDrink = ad.drinkExterno {
+            performSegue(withIdentifier:SegueID.detail, sender:unDrink)
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count
     }
@@ -35,12 +44,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueID.detail {
             let detailViewControler = segue.destination as! DetailViewController
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let drink = drinks[indexPath.row]
-            detailViewControler.drink = drink
+            if let drink = sender as? Drink {
+                detailViewControler.drink = drink
+            }
+            else {
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+                let drink = drinks[indexPath.row]
+                detailViewControler.drink = drink
+            }
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let index = self.tableView.indexPathForSelectedRow {
